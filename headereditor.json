@@ -1,0 +1,44 @@
+{
+	"request": [
+		{
+			"enable": 1,
+			"name": "GoogleAPIs",
+			"ruleType": "redirect",
+			"matchType": "regexp",
+			"pattern": "^http(s?)://(ajax|fonts)\\.googleapis\\.com/(.*)",
+			"exclude": "",
+			"isFunction": 0,
+			"action": "redirect",
+			"to": "https://$2.proxy.ustclug.org/$3",
+			"id": 1,
+			"_reg": {}
+		},
+		{
+			"enable": 1,
+			"name": "reCAPTCHA",
+			"ruleType": "redirect",
+			"matchType": "regexp",
+			"pattern": "^http(s?)://www\\.google\\.com/recaptcha/(.*)",
+			"exclude": "",
+			"isFunction": 0,
+			"action": "redirect",
+			"to": "https://recaptcha.net/recaptcha/$2",
+			"id": 2,
+			"_reg": {}
+		}
+	],
+	"sendHeader": [],
+	"receiveHeader": [
+		{
+			"enable": 1,
+			"name": "CSP allows redirections",
+			"ruleType": "modifyReceiveHeader",
+			"matchType": "all",
+			"pattern": "",
+			"exclude": "",
+			"isFunction": 1,
+			"code": "for (let i in val) {\n  if (val[i].name.toLowerCase() === 'content-security-policy') {\n    let s = val[i].value;\n    s = s.replace(/googleapis\\.com/g, '$& https://*.proxy.ustclug.org');\n    s = s.replace(/google\\.com/g, '$& https://recaptcha.net');\n    s = s.replace(/gstatic\\.com/g, '$& https://*.gstatic.cn');\n    val[i].value = s;\n    break;\n  }\n}",
+			"id": 1
+		}
+	]
+}
