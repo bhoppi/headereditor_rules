@@ -1,0 +1,19 @@
+{
+	"request": [
+		{
+			"enable": 1,
+			"name": "Steam Community",
+			"ruleType": "redirect",
+			"matchType": "regexp",
+			"pattern": "http://steamcommunity.com/(.*)",
+			"exclude": "",
+			"isFunction": false,
+			"action": "redirect",
+			"to": "https://steamcommunity.com/$1",
+			"id": 5,
+			"_reg": {}
+		}
+	],
+	"sendHeader": [],
+	"receiveHeader": []
+}
