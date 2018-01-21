@@ -5,7 +5,7 @@
 			"name": "Steam Community",
 			"ruleType": "redirect",
 			"matchType": "regexp",
-			"pattern": "http://steamcommunity.com/(.*)",
+			"pattern": "^http://steamcommunity\\.com/(.*)",
 			"exclude": "",
 			"isFunction": false,
 			"action": "redirect",
