@@ -1,0 +1,19 @@
+{
+	"request": [
+		{
+			"enable": 1,
+			"name": "Google Sorry",
+			"ruleType": "redirect",
+			"matchType": "regexp",
+			"pattern": "^https://ipv[46]\\.google\\.com/sorry/index\\?continue=(.*)&q=(.*)",
+			"exclude": "",
+			"isFunction": false,
+			"action": "redirect",
+			"to": "$1",
+			"id": 1,
+			"_reg": {}
+		}
+	],
+	"sendHeader": [],
+	"receiveHeader": []
+}
