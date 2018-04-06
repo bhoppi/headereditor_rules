@@ -18,11 +18,11 @@
 			"name": "Steam Store",
 			"ruleType": "redirect",
 			"matchType": "regexp",
-			"pattern": "^http://(.*).steampowered\\.com/(.*)",
+			"pattern": "^http://store\\.steampowered\\.com/(.*)",
 			"exclude": "",
 			"isFunction": false,
 			"action": "redirect",
-			"to": "https://$1.steampowered.com/$2",
+			"to": "https://store.steampowered.com/$1",
 			"id": 2,
 			"_reg": {}
 		}
