@@ -10,7 +10,20 @@
 			"isFunction": false,
 			"action": "redirect",
 			"to": "https://steamcommunity.com/$1",
-			"id": 5,
+			"id": 1,
+			"_reg": {}
+		},
+		{
+			"enable": 1,
+			"name": "Steam Store",
+			"ruleType": "redirect",
+			"matchType": "regexp",
+			"pattern": "^http://(.*).steampowered\\.com/(.*)",
+			"exclude": "",
+			"isFunction": false,
+			"action": "redirect",
+			"to": "https://$1.steampowered.com/$2",
+			"id": 2,
 			"_reg": {}
 		}
 	],
