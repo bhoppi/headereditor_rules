@@ -12,19 +12,6 @@
 			"to": "https://steamcommunity.com/$1",
 			"id": 1,
 			"_reg": {}
-		},
-		{
-			"enable": 1,
-			"name": "Steam Store",
-			"ruleType": "redirect",
-			"matchType": "regexp",
-			"pattern": "^http://store\\.steampowered\\.com/(.*)",
-			"exclude": "",
-			"isFunction": false,
-			"action": "redirect",
-			"to": "https://store.steampowered.com/$1",
-			"id": 2,
-			"_reg": {}
 		}
 	],
 	"sendHeader": [],
