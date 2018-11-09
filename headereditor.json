@@ -5,11 +5,11 @@
 			"name": "GoogleAPIs",
 			"ruleType": "redirect",
 			"matchType": "regexp",
-			"pattern": "^http(s?)://ajax\\.googleapis\\.com/(.*)",
+			"pattern": "^https?://ajax\\.googleapis\\.com/(.*)",
 			"exclude": "",
 			"isFunction": 0,
 			"action": "redirect",
-			"to": "https://gapis.geekzu.org/ajax/$2",
+			"to": "https://gapis.geekzu.org/ajax/$1",
 			"id": 1,
 			"_reg": {}
 		},
@@ -18,11 +18,11 @@
 			"name": "reCAPTCHA",
 			"ruleType": "redirect",
 			"matchType": "regexp",
-			"pattern": "^http(s?)://www\\.google\\.com/recaptcha/(.*)",
+			"pattern": "^https?://www\\.google\\.com/recaptcha/(.*)",
 			"exclude": "",
 			"isFunction": 0,
 			"action": "redirect",
-			"to": "https://recaptcha.net/recaptcha/$2",
+			"to": "https://recaptcha.net/recaptcha/$1",
 			"id": 2,
 			"_reg": {}
 		}
