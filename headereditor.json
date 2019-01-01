@@ -1,44 +1,42 @@
 {
 	"request": [
 		{
-			"enable": 1,
+			"enable": true,
 			"name": "GoogleAPIs",
 			"ruleType": "redirect",
 			"matchType": "regexp",
 			"pattern": "^https?://ajax\\.googleapis\\.com/(.*)",
 			"exclude": "",
-			"isFunction": 0,
+			"isFunction": false,
 			"action": "redirect",
 			"to": "https://gapis.geekzu.org/ajax/$1",
-			"id": 1,
-			"_reg": {}
+			"group": "Ungrouped"
 		},
 		{
-			"enable": 1,
+			"enable": true,
 			"name": "reCAPTCHA",
 			"ruleType": "redirect",
 			"matchType": "regexp",
 			"pattern": "^https?://www\\.google\\.com/recaptcha/(.*)",
 			"exclude": "",
-			"isFunction": 0,
+			"isFunction": false,
 			"action": "redirect",
 			"to": "https://recaptcha.net/recaptcha/$1",
-			"id": 2,
-			"_reg": {}
+			"group": "Ungrouped"
 		}
 	],
 	"sendHeader": [],
 	"receiveHeader": [
 		{
-			"enable": 1,
+			"enable": true,
 			"name": "CSP allows redirections",
 			"ruleType": "modifyReceiveHeader",
 			"matchType": "all",
 			"pattern": "",
 			"exclude": "",
-			"isFunction": 1,
+			"isFunction": true,
 			"code": "let rt = detail.type;\nif (rt === 'script' || rt === 'stylesheet' || rt === 'main_frame' || rt === 'sub_frame') {\n  for (let i in val) {\n    if (val[i].name.toLowerCase() === 'content-security-policy') {\n      let s = val[i].value;\n      s = s.replace(/googleapis\\.com/g, '$& https://gapis.geekzu.org');\n      s = s.replace(/google\\.com/g, '$& https://recaptcha.net');\n      s = s.replace(/gstatic\\.com/g, '$& https://*.gstatic.cn');\n      val[i].value = s;\n      break;\n    }\n  }\n}",
-			"id": 1
+			"group": "Ungrouped"
 		}
 	]
 }

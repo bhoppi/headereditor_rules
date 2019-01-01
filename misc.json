@@ -1,7 +1,7 @@
 {
 	"request": [
 		{
-			"enable": 1,
+			"enable": true,
 			"name": "Google Sorry",
 			"ruleType": "redirect",
 			"matchType": "regexp",
@@ -10,8 +10,7 @@
 			"isFunction": false,
 			"action": "redirect",
 			"to": "$1",
-			"id": 1,
-			"_reg": {}
+			"group": "Ungrouped"
 		}
 	],
 	"sendHeader": [],
