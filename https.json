@@ -1,18 +1,5 @@
 {
-	"request": [
-		{
-			"enable": true,
-			"name": "Steam Store Login",
-			"ruleType": "redirect",
-			"matchType": "regexp",
-			"pattern": "^http://store\\.akamai\\.steamstatic\\.com/(.*)",
-			"exclude": "",
-			"isFunction": false,
-			"action": "redirect",
-			"to": "https://store.akamai.steamstatic.com/$1",
-			"group": "Ungrouped"
-		}
-	],
+	"request": [],
 	"sendHeader": [],
 	"receiveHeader": []
 }
