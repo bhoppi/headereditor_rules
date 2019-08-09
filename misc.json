@@ -5,7 +5,7 @@
 			"name": "Google Sorry",
 			"ruleType": "redirect",
 			"matchType": "regexp",
-			"pattern": "^https?://(ipv[46]|www)\.google\.com/sorry/index\?continue=(.*)&q=(.*)",
+			"pattern": "^https?://(ipv[46]|www)\\.google\\.com/sorry/index\\?continue=(.*)&q=(.*)",
 			"exclude": "",
 			"isFunction": false,
 			"action": "redirect",
